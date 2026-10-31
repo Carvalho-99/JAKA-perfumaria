@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="pt-BR" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Jaka Perfumaria · Diego Moreira</title>
+  <meta name="description" content="Jaka Perfumaria — perfumes nacionais e importados, de O Boticário aos árabes. Atendimento do perfumista Diego Moreira.">
+  <meta name="theme-color" content="#071C1B">
+  <link rel="icon" href="img/marca/icone-32.png" sizes="32x32" type="image/png">
+  <link rel="icon" href="img/marca/icone-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="img/marca/icone-180.png">
+  <script>
+    document.documentElement.classList.add('js');
+    try { var t = localStorage.getItem('jaka-tema'); if (t === 'dark' || t === 'light') document.documentElement.dataset.theme = t; } catch (e) {}
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="css/styles.css?v=20261031h">
+</head>
+<body>
+  <a class="skip" href="#main">Pular para o conteúdo</a>
+  <div class="demo-bar" id="demoBar" hidden></div>
+
+  <header class="header" id="header">
+    <div class="header__inner">
+      <div class="header__left">
+        <button class="icon-btn" id="menuBtn" aria-label="Abrir menu" aria-controls="drawer" aria-expanded="false" data-icon="menu"></button>
+        <a class="header__link" href="#/catalogo">Catálogo</a>
+      </div>
+      <a class="logo" href="#/" aria-label="Jaka Perfumaria — início">
+        <span class="logo__mark">JAKA</span>
+        <span class="logo__sub">PERFUMARIA</span>
+      </a>
+      <div class="header__right">
+        <button class="icon-btn" id="searchBtn" aria-label="Buscar perfumes" data-icon="search"></button>
+        <button class="icon-btn theme-btn" id="themeBtn" aria-label="Alternar tema">
+          <span class="theme-btn__sun" data-icon="sun"></span>
+          <span class="theme-btn__moon" data-icon="moon"></span>
+        </button>
+        <button class="icon-btn" id="favBtn" aria-label="Favoritos" aria-controls="favPanel" data-icon="heart">
+          <span class="count" id="favCount" hidden>0</span>
+        </button>
+        <button class="icon-btn" id="bagBtn" aria-label="Sacola" aria-controls="bagPanel" data-icon="bag">
+          <span class="count" id="bagCount" hidden>0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+    <div class="boot" aria-live="polite">
+      <div class="skeleton skeleton--hero"></div>
+      <div class="skeleton-row"><div class="skeleton"></div><div class="skeleton"></div><div class="skeleton"></div></div>
+    </div>
+    <noscript><p class="wrap" style="padding:4rem 0">Ative o JavaScript para navegar pelo catálogo, ou fale com a loja pelo WhatsApp (42) 99861-8040.</p></noscript>
+  </main>
+
+  <footer class="footer" id="footer"></footer>
+
+  <div class="overlay" id="overlay" hidden></div>
+
+  <aside class="drawer" id="drawer" aria-label="Menu" aria-hidden="true" inert></aside>
+
+  <aside class="panel" id="bagPanel" aria-label="Sacola" aria-hidden="true" inert></aside>
+  <aside class="panel" id="favPanel" aria-label="Favoritos" aria-hidden="true" inert></aside>
+
+  <div class="search" id="search" role="dialog" aria-modal="true" aria-label="Buscar perfumes" aria-hidden="true" inert>
+    <div class="search__box">
+      <div class="search__field">
+        <span data-icon="search" aria-hidden="true"></span>
+        <input id="searchInput" type="search" placeholder="Busque por nome, marca ou nota (ex.: baunilha)" autocomplete="off" aria-label="Buscar">
+        <button class="icon-btn" data-close aria-label="Fechar busca" data-icon="close"></button>
+      </div>
+      <div class="search__results" id="searchResults" role="listbox" aria-label="Resultados"></div>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="js/config.js?v=20261031h"></script>
+  <script src="js/products.js?v=20261031h"></script>
+  <script src="js/app.js?v=20261031h"></script>
+</body>
+</html>
