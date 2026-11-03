@@ -18,8 +18,8 @@ visitantes não segurar a versão antiga.
 
 - **Preços e estoque** de todos os 15 perfumes são provisórios.
 - **Notas olfativas** foram preenchidas para demonstração; conferir com a descrição oficial de cada fabricante.
-- **Imagens**: os 41 produtos têm frasco sem fundo gerado por IA (abertura, cards, galeria); 7 têm também
-  foto real como imagem seguinte. Veja a seção "Fotos" abaixo.
+- **Imagens**: os 41 produtos têm frasco sem fundo gerado por IA (abertura, cards, galeria), sem fotos
+  reais. Veja a seção "Fotos" abaixo.
 - **Catálogo**: 41 perfumes (19 O Boticário, 22 árabes), os 40 da lista pesquisada + Sabah Al Ward. Clash e
   Malbec Magnetic saíram em 31/10/2026 por não haver confirmação de que existem.
 - **Entrega, pagamento, trocas e horário** estão marcados com `[a confirmar]` em `js/config.js`.
@@ -42,25 +42,11 @@ visitantes não segurar a versão antiga.
 
 ## Fotos
 
-Fotos de produto ficam em `img/produtos/` em 800×1000 (4:5). O site preenche o card com a foto;
-sem foto, ele desenha o frasco a partir de `frasco` no produto. Com 2 fotos, o card troca de imagem ao passar o mouse.
-
-Com foto real hoje (adicionadas em 30/10/2026):
-
-| Produto | Arquivo | Origem |
-|---|---|---|
-| Malbec Tradicional | `malbec-1.jpg` | divulgação O Boticário |
-| Malbec Eau de Parfum | `malbec-edp-1.jpg` | divulgação O Boticário |
-| Malbec Magnetic | `malbec-magnetic-1.jpg` | **imagem gerada por IA** (tinha marca d'água "Dola AI", cortada; o rótulo pequeno sai com letras erradas). Trocar por foto oficial. |
-| Clash | `clash-1.jpg` | parece gerada por IA também. Trocar por foto oficial. |
-| Coffee Woman Seduction | `coffee-woman-1.jpg` | divulgação O Boticário |
-| Lily Eau de Parfum | `lily-1.jpg` | divulgação O Boticário |
-| Hawas for Him | `hawas-1.jpg` + `arabes-trio.jpg` | foto do Diego (WhatsApp), frasco recortado |
-| Hawas Black | `hawas-black-1.jpg` + `arabes-trio.jpg` | foto do Diego (WhatsApp), frasco recortado |
-| The Kingdom | `the-kingdom-1.jpg` + `arabes-trio.jpg` | foto do Diego (WhatsApp), frasco recortado |
-
-Nos três árabes aparece a beirada do frasco vizinho, porque na foto original eles estão encostados.
-Fica bom fotografar cada frasco sozinho, de frente, com fundo claro e liso.
+Todos os produtos usam só o frasco sem fundo (`recorte`). As fotos reais que existiam como segunda imagem
+(3 árabes fotografados pelo Diego e 4 de divulgação de O Boticário) foram retiradas em 03/11/2026 a pedido do
+Bruno, por destoarem do padrão; os originais continuam no OneDrive dele. O campo `fotos` segue funcionando:
+se um dia houver fotos no padrão, basta apontar `fotos: [...]` no produto que elas viram as imagens seguintes
+da galeria (e a troca no hover do card).
 
 **Frascos sem fundo (`recorte`):** imagens WebP com transparência em `img/abertura/`, ligadas ao produto pelo
 campo `recorte` em `js/products.js` (`src/w/h` da frente e, opcionalmente, `esq` e `dir` com o frasco girado).

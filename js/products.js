@@ -1,6 +1,6 @@
 /* ==========================================================
    CATÁLOGO — preços, estoque e notas são de DEMONSTRAÇÃO.
-   Para usar fotos reais, coloque os arquivos em img/produtos/
+   Para usar fotos reais (opcional), crie a pasta img/produtos/ com os arquivos
    e preencha "fotos": ['img/produtos/khamrah-1.jpg', 'img/produtos/khamrah-2.jpg'].
    Sem fotos, o site desenha o frasco a partir de "frasco".
    "recorte" = imagem do frasco SEM FUNDO (WebP/PNG), usada só na abertura, com largura e altura em pixels.
@@ -17,7 +17,7 @@ window.PRODUCTS = [
     ocasioes: ['Noite', 'Trabalho', 'Frio'],
     frasco: { forma: 'classico', liquido: '#5A1A22', tampa: '#1E1410', rotulo: '#E2CFAE' },
     recorte: { src: 'img/abertura/malbec.webp', w: 430, h: 1100, esq: { src: 'img/abertura/malbec-esq.webp', w: 356, h: 900 }, dir: { src: 'img/abertura/malbec-dir.webp', w: 349, h: 900 } },
-    fotos: ['img/produtos/malbec-1.jpg'], variacoes: [{ ml: 100, preco: 229.90, estoque: 6 }]
+    fotos: [], variacoes: [{ ml: 100, preco: 229.90, estoque: 6 }]
   },
   {
     id: 'malbec-edp', nome: 'Malbec Eau de Parfum', marca: 'O Boticário', origem: 'nacional',
@@ -27,7 +27,7 @@ window.PRODUCTS = [
     ocasioes: ['Noite', 'Ocasiões especiais', 'Frio'],
     frasco: { forma: 'classico', liquido: '#3A0F16', tampa: '#4A2A1E', rotulo: '#C9A15B' },
     recorte: { src: 'img/abertura/malbec-edp.webp', w: 413, h: 1100 },
-    fotos: ['img/produtos/malbec-edp-1.jpg'], variacoes: [{ ml: 90, preco: 299.90, estoque: 4 }]
+    fotos: [], variacoes: [{ ml: 90, preco: 299.90, estoque: 4 }]
   },
   {
     id: 'malbec-bleu', nome: 'Malbec Bleu', marca: 'O Boticário', origem: 'nacional',
@@ -147,7 +147,7 @@ window.PRODUCTS = [
     ocasioes: ['Ocasiões especiais', 'Noite'],
     frasco: { forma: 'gota', liquido: '#F2E4CF', tampa: '#C9A15B', rotulo: '#FFFFFF' },
     recorte: { src: 'img/abertura/lily.webp', w: 1110, h: 1100, esq: { src: 'img/abertura/lily-esq.webp', w: 869, h: 900 }, dir: { src: 'img/abertura/lily-dir.webp', w: 902, h: 900 } },
-    fotos: ['img/produtos/lily-1.jpg'], variacoes: [{ ml: 75, preco: 309.90, estoque: 4 }, { ml: 30, preco: 169.90, estoque: 2 }]
+    fotos: [], variacoes: [{ ml: 75, preco: 309.90, estoque: 4 }, { ml: 30, preco: 169.90, estoque: 2 }]
   },
   {
     id: 'floratta-blue', nome: 'Floratta Blue', marca: 'O Boticário', origem: 'nacional',
@@ -187,7 +187,7 @@ window.PRODUCTS = [
     ocasioes: ['Noite', 'Frio'],
     frasco: { forma: 'gota', liquido: '#6A3B2A', tampa: '#2B1A14', rotulo: '#E6CFB4' },
     recorte: { src: 'img/abertura/coffee-woman.webp', w: 809, h: 1100 },
-    fotos: ['img/produtos/coffee-woman-1.jpg'], variacoes: [{ ml: 100, preco: 179.90, estoque: 4 }]
+    fotos: [], variacoes: [{ ml: 100, preco: 179.90, estoque: 4 }]
   },
 
   // ---------- Árabes ----------
@@ -199,7 +199,7 @@ window.PRODUCTS = [
     ocasioes: ['Dia', 'Calor', 'Trabalho'],
     frasco: { forma: 'classico', liquido: '#9B7FC4', tampa: '#4A4A50', rotulo: '#E8E4F2' },
     recorte: { src: 'img/abertura/hawas.webp', w: 642, h: 1100, esq: { src: 'img/abertura/hawas-esq.webp', w: 516, h: 900 }, dir: { src: 'img/abertura/hawas-dir.webp', w: 517, h: 900 } },
-    fotos: ['img/produtos/hawas-1.jpg', 'img/produtos/arabes-trio.jpg'], variacoes: [{ ml: 100, preco: 379.90, estoque: 3 }, { ml: 10, preco: 64.90, estoque: 8 }]
+    fotos: [], variacoes: [{ ml: 100, preco: 379.90, estoque: 3 }, { ml: 10, preco: 64.90, estoque: 8 }]
   },
   {
     id: 'hawas-black', nome: 'Hawas Black', marca: 'Rasasi', origem: 'arabe',
@@ -209,7 +209,7 @@ window.PRODUCTS = [
     ocasioes: ['Noite', 'Frio', 'Ocasiões especiais'],
     frasco: { forma: 'classico', liquido: '#141414', tampa: '#1C1C1C', rotulo: '#C9A15B' },
     recorte: { src: 'img/abertura/hawas-black.webp', w: 639, h: 1100 },
-    fotos: ['img/produtos/hawas-black-1.jpg', 'img/produtos/arabes-trio.jpg'], variacoes: [{ ml: 100, preco: 399.90, estoque: 2 }, { ml: 10, preco: 69.90, estoque: 6 }]
+    fotos: [], variacoes: [{ ml: 100, preco: 399.90, estoque: 2 }, { ml: 10, preco: 69.90, estoque: 6 }]
   },
   {
     id: 'the-kingdom', nome: 'The Kingdom', marca: 'Lattafa', origem: 'arabe',
@@ -219,7 +219,7 @@ window.PRODUCTS = [
     ocasioes: ['Noite', 'Ocasiões especiais', 'Frio'],
     frasco: { forma: 'facetado', liquido: '#C9A15B', tampa: '#D9B56A', rotulo: '#B08A4A' },
     recorte: { src: 'img/abertura/the-kingdom.webp', w: 587, h: 1100, esq: { src: 'img/abertura/the-kingdom-esq.webp', w: 473, h: 900 }, dir: { src: 'img/abertura/the-kingdom-dir.webp', w: 490, h: 900 } },
-    fotos: ['img/produtos/the-kingdom-1.jpg', 'img/produtos/arabes-trio.jpg'], variacoes: [{ ml: 100, preco: 329.90, estoque: 3 }, { ml: 10, preco: 54.90, estoque: 10 }]
+    fotos: [], variacoes: [{ ml: 100, preco: 329.90, estoque: 3 }, { ml: 10, preco: 54.90, estoque: 10 }]
   },
   {
     id: 'khamrah', nome: 'Khamrah', marca: 'Lattafa', origem: 'arabe',
