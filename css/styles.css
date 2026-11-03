@@ -796,6 +796,11 @@ mark { background: var(--gold-soft); color: inherit; border-radius: 3px; padding
 
 /* ---------- Frasco sem fundo nos cards, galeria, sacola (sobre o fundo do próprio site) ---------- */
 img.cutout { max-width: 100%; max-height: 100%; width: auto; height: auto; object-fit: contain; filter: drop-shadow(0 16px 16px rgba(0,0,0,.22)); }
+/* nas caixas pequenas (quiz, busca, sacola, miniaturas) a imagem é posicionada dentro da caixa, para nunca vazar */
+.mini__img, .line__img, .toast__img, .gallery__thumb { position: relative; overflow: hidden; min-width: 0; }
+.mini__img > img.cutout, .line__img > img.cutout, .toast__img > img.cutout, .gallery__thumb > img.cutout {
+  position: absolute; inset: 8%; width: 84%; height: 84%; max-width: none; max-height: none; object-fit: contain; filter: drop-shadow(0 6px 8px rgba(0,0,0,.25));
+}
 .card:hover .card__img--a img.cutout { transform: translateY(-4px); }
 .card__img img.cutout { transition: transform .6s var(--ease); }
 
